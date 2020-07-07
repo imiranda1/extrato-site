@@ -1,0 +1,42 @@
+
+<mat-table [dataSource]="lancamentos" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="dataLancamento">
+    <mat-header-cell *matHeaderCellDef> Data Lançamento </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.dataLancamento}} </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="descricao">
+    <mat-header-cell *matHeaderCellDef> Descrição </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.descricao}} </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="numero">
+    <mat-header-cell *matHeaderCellDef> Número </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.numero}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="situacao">
+    <mat-header-cell *matHeaderCellDef> Situação </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.situacao}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="dataConfirmacao">
+    <mat-header-cell *matHeaderCellDef> Data Confirmação </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.dataConfirmacao}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="dadosBancarios">
+    <mat-header-cell *matHeaderCellDef> Dados Bancários </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.dadosBancarios}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="valorFinal">
+    <mat-header-cell *matHeaderCellDef> Valor Final</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.valorFinal}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
